@@ -28,3 +28,19 @@ const (
 	FUNCTION = "FUNCTION"
 	LET = "LET"
 )
+
+var keywords = map[string]TokenType {
+	"fn": FUNCTION,
+	"let": LET,
+}
+
+// looks up the ident read and returns the correct token type.
+// If it's a keyword returns the token type for that keyword.
+// if not then returns just IDENT
+func LookupIdent(ident string) TokenType {
+	if tok, ok := keywords[ident]; ok {
+		return tok
+	}
+
+	return  IDENT
+}
