@@ -16,9 +16,17 @@ const (
 
 	ASSIGN = "="	
 	PLUS = "+"
-	
+	MINUS = "-"
+	DIVIDE = "/"
+	MULTIPLY = "*"
+
+	NOT = "!"
+	LESSTHAN = "<"
+	GREATERTHAN = ">"
+
 	COMMA = ","
 	SEMICOLAN = ";"
+
 
 	LPAREN = "("
 	RPAREN = ")"
@@ -27,11 +35,21 @@ const (
 
 	FUNCTION = "FUNCTION"
 	LET = "LET"
+	TRUE = "TRUE"
+	FALSE = "FALSE"
+	IF = "IF"
+	ELSE = "ELSE"
+	RETURN = "RETURN"
 )
 
 var keywords = map[string]TokenType {
 	"fn": FUNCTION,
 	"let": LET,
+	"true": TRUE,
+	"false": FALSE,
+	"if": IF,
+	"else": ELSE,
+	"return": RETURN,
 }
 
 // looks up the ident read and returns the correct token type.
