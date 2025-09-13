@@ -23,6 +23,8 @@ const (
 	NOT = "!"
 	LESSTHAN = "<"
 	GREATERTHAN = ">"
+	EQ = "=="
+	NOT_EQ = "!="
 
 	COMMA = ","
 	SEMICOLAN = ";"
